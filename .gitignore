@@ -1,0 +1,30 @@
+# Arquivos de ambiente
+.env
+
+# Arquivos compilados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Banco de dados SQLite (opcional, caso esteja usando em dev)
+db.sqlite3
+
+# Logs
+*.log
+
+# Arquivos de mídia e estáticos coletados
+/media/
+staticfiles/
+static/
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações do editor
+.vscode/
+.idea/
+
+# Virtualenv
+venv/
+.env/
