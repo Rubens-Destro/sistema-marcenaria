@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.http import JsonResponse
+from .models import Produto 
 
-# Create your views here.
+def listar_produtos(request):
+    produtos = list(Produto.objects.values())
+    return JsonResponse(produtos, safe=False);
