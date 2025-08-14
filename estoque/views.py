@@ -16,12 +16,14 @@ def criar_produto(request):
         quantidade = request.POST.get('quantidade')
         preco = request.POST.get('preco', 12)
 
-        produto = Produto.objects.create(
+        produto = Produto(
             nome=nome,
             descricao=descricao,
             quantidade=quantidade,
             preco=preco,
         )
+        produto.full_clean()
+        produto.save()
 
         return JsonResponse({
             "produto": model_to_dict(produto),
